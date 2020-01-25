@@ -26,7 +26,12 @@ class BattleshipGame(object)
         return self.winner()
 
     def winner(self) -> bool:
-        pass
+        return self.all_ships_terminated() or self.partially_terminated()
+
+    def change_turn(self) -> None:
+        self.turn_currrent_players = (self.turn_current_player + 1) % 2
+
+
 
 
 
