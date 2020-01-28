@@ -1,4 +1,4 @@
-
+from.board import Board
 
 class BattleshipGame(object)
     def __init__(self,dimensions:int) -> None:
@@ -29,7 +29,7 @@ class BattleshipGame(object)
         return self.all_ships_terminated() or self.partially_terminated()
 
     def change_turn(self) -> None:
-        self.turn_currrent_players = (self.turn_current_player + 1) % 2
+        self.turn_currrent_player = (self.turn_current_player + 1) % 2
 
 
 
