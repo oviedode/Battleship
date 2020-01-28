@@ -1,8 +1,9 @@
-from.board import Board
+from .Board import Board
 
-class BattleshipGame(object)
+class BattleshipGame(object):
+
     def __init__(self,dimensions:int) -> None:
-        self.board = None
+        self.Board = Board(dimensions, dimensions)
         self.players = []
 
     def play(self)->None:
@@ -19,7 +20,7 @@ class BattleshipGame(object)
 
     #Prints the board
     def display_game(self) -> None:
-        print(self.board)
+        print(self.Board)
 
     #Game is over when one wins
     def is_game_over(self):
