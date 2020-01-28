@@ -1,4 +1,5 @@
 from .Board import Board
+from .Player import Player
 
 class BattleshipGame(object):
 
@@ -6,10 +7,10 @@ class BattleshipGame(object):
         self.Board = Board(dimensions, dimensions)
         self.players = []
 
+    # makes the player move
+    # create the movement
+    # make the player change turns
     def play(self)->None:
-        #makes the player move
-        #create the movement
-        #make the player change turns
         while not self.is_game_over():
             self.display_game()
             current_player = self.get
