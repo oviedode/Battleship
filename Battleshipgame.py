@@ -12,6 +12,7 @@ class BattleshipGame(object):
         #make the player change turns
         while not self.is_game_over():
             self.display_game()
+            current_player = self.get
             the_move = current_player.move()
             the_move.make()
             self.change_turn()
@@ -30,7 +31,7 @@ class BattleshipGame(object):
         return self.all_ships_terminated() or self.partially_terminated()
 
     def change_turn(self) -> None:
-        self.turn_currrent_player = (self.turn_current_player + 1) % 2
+        self.turn_current_player = (self.turn_current_player + 1) % 2
 
 
 
