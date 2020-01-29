@@ -1,11 +1,15 @@
 from .Board import Board
 from .Player import Player
+from .Move import Move
 
 class BattleshipGame(object):
 
     def __init__(self,dimensions:int) -> None:
         self.Board = Board(dimensions, dimensions)
         self.players = []
+        for player_row in range(2):
+            self.players.append(Player(self.players, blank_char))
+
 
     # makes the player move
     # create the movement
@@ -27,6 +31,7 @@ class BattleshipGame(object):
     #Game is over when one wins
     def is_game_over(self):
         return self.winner()
+
 
     def winner(self) -> bool:
         return self.all_ships_terminated() or self.partially_terminated()

@@ -1,6 +1,6 @@
 from typing import Iterator, List
-class Board(object):
 
+class Board(object):
     def __init__(self, num_rows:int, num_cols:int, blank_char:str) -> None:
         self.contents = [[blank_char for col in (num_cols)] for row in range(num_rows)]
         self.blank_char = blank_char
